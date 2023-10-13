@@ -1,9 +1,15 @@
 # Attention by Elmarzouguidev
 
-for testing in  php8.1 or 8.1 in(Ubuntu 22.*) you need to install sqlite 3
+for testing in  php8.1 or 8.2 in( Ubuntu 22.*) you need to install sqlite 3
 
-1 step: sudo apt install sqlite3
-2 step: sudo apt-get install php8.1-sqlite3 -y
+1 step: 
+```php
+     sudo apt install sqlite3
+```
+2 step: 
+```php
+     sudo apt-get install php8.1-sqlite3 -y
+```
 
 # Attention
 Due to the difficulty experienced by certain individuals and companies in comprehending the [copyleft provision of the MIT license](https://github.com/bumbummen99/LaravelShoppingcart/blob/1c50fb564826b6ee748d2d9afad7447b6884166e/LICENSE#L12), as evidenced by the unauthorized relicensing of my work and that of others, I have opted to terminate all further development and assistance for this repository. Given that this package is intended for use in e-commerce projects, it is expected that the necessary resources would be available for the development and support of your own solutions.

@@ -1,4 +1,5 @@
 # Attention by Elmarzouguidev
+The original package :   [LaravelShoppingcart](https://github.com/bumbummen99/LaravelShoppingcart)
 
 for testing in  php8.1 or 8.2 in( Ubuntu 22.*) you need to install sqlite 3
 
@@ -11,10 +12,6 @@ for testing in  php8.1 or 8.2 in( Ubuntu 22.*) you need to install sqlite 3
      sudo apt-get install php8.1-sqlite3 -y
 ```
 
-# Attention
-Due to the difficulty experienced by certain individuals and companies in comprehending the [copyleft provision of the MIT license](https://github.com/bumbummen99/LaravelShoppingcart/blob/1c50fb564826b6ee748d2d9afad7447b6884166e/LICENSE#L12), as evidenced by the unauthorized relicensing of my work and that of others, I have opted to terminate all further development and assistance for this repository. Given that this package is intended for use in e-commerce projects, it is expected that the necessary resources would be available for the development and support of your own solutions.
-
-
 ## LaravelShoppingcart
 ![CI Code Checks](https://github.com/bumbummen99/LaravelShoppingcart/workflows/CI%20Code%20Checks/badge.svg?branch=master)
 [![codecov](https://codecov.io/gh/bumbummen99/LaravelShoppingcart/branch/master/graph/badge.svg)](https://codecov.io/gh/bumbummen99/LaravelShoppingcart)
@@ -24,7 +21,6 @@ Due to the difficulty experienced by certain individuals and companies in compre
 [![Latest Unstable Version](https://poser.pugx.org/bumbummen99/shoppingcart/v/unstable)](https://packagist.org/packages/bumbummen99/shoppingcart)
 [![License](https://poser.pugx.org/bumbummen99/shoppingcart/license)](https://packagist.org/packages/bumbummen99/shoppingcart)
 
-This is a fork of [Crinsane's LaravelShoppingcart](https://github.com/Crinsane/LaravelShoppingcart) extended with minor features compatible with Laravel 8+. An example integration can be [found here](https://github.com/bumbummen99/LaravelShoppingcartDemo).
 
 ## Installation
 
@@ -32,7 +28,7 @@ Install the [package](https://packagist.org/packages/bumbummen99/shoppingcart) t
 
 Run the Composer require command from the Terminal:
 
-    composer require bumbummen99/shoppingcart
+    composer require elmarzouguidev/shoppingcart
 
 Now you're ready to start using the shoppingcart in your application.
 

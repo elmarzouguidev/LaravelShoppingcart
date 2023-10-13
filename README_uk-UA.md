@@ -334,11 +334,11 @@ $cart->setDiscount($rowId, 21);
 <?php
 namespace App\Models;
 
-use Gloudemans\Shoppingcart\Contracts\Buyable;
+use Elmarzouguidev\Shoppingcart\Contracts\Buyable;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model implements Buyable {
-    use Gloudemans\Shoppingcart\CanBeBought;
+    use Elmarzouguidev\Shoppingcart\CanBeBought;
 }
 ```
 
@@ -365,7 +365,7 @@ class Product extends Model implements Buyable {
 <?php
 namespace App\Models;
 
-use Gloudemans\Shoppingcart\Contracts\Buyable;
+use Elmarzouguidev\Shoppingcart\Contracts\Buyable;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model implements Buyable {
@@ -431,7 +431,7 @@ Cart::instance('wishlist')->count();
 namespace App;
 ...
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Gloudemans\Shoppingcart\Contracts\InstanceIdentifier;
+use Elmarzouguidev\Shoppingcart\Contracts\InstanceIdentifier;
 
 class User extends Authenticatable implements InstanceIdentifier
 {
@@ -512,13 +512,13 @@ foreach(Cart::content() as $row) {
 За замовчуванням, пакет використовуватиме підключення до бази даних, яке вказане за замовчуванням, та використовуватиме таблицію `shoppingcart`.
 Якщо ви хочете змінити ці значення, вам потрібно буде опублікувати файл з конфігураціями `config`.
 
-    php artisan vendor:publish --provider="Gloudemans\Shoppingcart\ShoppingcartServiceProvider" --tag="config"
+    php artisan vendor:publish --provider="Elmarzouguidev\Shoppingcart\ShoppingcartServiceProvider" --tag="config"
 
 Така дія створить вам файл з конфігураціями `cart.php`, в якому ви можете внести бажані зміни.
 
 Щоб спростити ваше життя, пакет також включає готову до вжитку `migration`, яку можна опублікувати через запуск наступної команди:
 
-    php artisan vendor:publish --provider="Gloudemans\Shoppingcart\ShoppingcartServiceProvider" --tag="migrations"
+    php artisan vendor:publish --provider="Elmarzouguidev\Shoppingcart\ShoppingcartServiceProvider" --tag="migrations"
     
 Така дія розмістить файл з міграцією таблиці `shoppingcart` в директорію `database/migrations`. Все що вам залишається зробити, це запустити `php artisan migrate` для міграції вашої бази даних.
 

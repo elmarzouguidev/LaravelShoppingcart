@@ -1,6 +1,6 @@
 <?php
 
-namespace Gloudemans\Tests\Shoppingcart\Fixtures;
+namespace Elmarzouguidev\Tests\Shoppingcart\Fixtures;
 
 class ProductModel
 {

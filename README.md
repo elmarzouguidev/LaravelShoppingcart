@@ -27,7 +27,7 @@ Now you're ready to start using the shoppingcart in your application.
 
 You definitely should publish the `config` file and take a look at it.
 
-    php artisan vendor:publish --provider="Gloudemans\Shoppingcart\ShoppingcartServiceProvider" --tag="config"
+    php artisan vendor:publish --provider="Elmarzouguidev\Shoppingcart\ShoppingcartServiceProvider" --tag="config"
 
 This will give you a `cart.php` config file in which you can make changes to the packages behaivor.
 
@@ -388,11 +388,11 @@ For the convenience of faster adding items to cart and their automatic associati
 <?php
 namespace App\Models;
 
-use Gloudemans\Shoppingcart\Contracts\Buyable;
+use Elmarzouguidev\Shoppingcart\Contracts\Buyable;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model implements Buyable {
-    use Gloudemans\Shoppingcart\CanBeBought;
+    use Elmarzouguidev\Shoppingcart\CanBeBought;
 }
 ```
 
@@ -419,7 +419,7 @@ Example:
 <?php
 namespace App\Models;
 
-use Gloudemans\Shoppingcart\Contracts\Buyable;
+use Elmarzouguidev\Shoppingcart\Contracts\Buyable;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model implements Buyable {
@@ -488,7 +488,7 @@ You can also use the `InstanceIdentifier` Contract to extend a desired Model to 
 namespace App;
 ...
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Gloudemans\Shoppingcart\Contracts\InstanceIdentifier;
+use Elmarzouguidev\Shoppingcart\Contracts\InstanceIdentifier;
 
 class User extends Authenticatable implements InstanceIdentifier
 {
@@ -570,7 +570,7 @@ By default the package will use the default database connection and use a table 
 
 To make your life easy, the package also includes a ready to use `migration` which you can publish by running:
 
-    php artisan vendor:publish --provider="Gloudemans\Shoppingcart\ShoppingcartServiceProvider" --tag="migrations"
+    php artisan vendor:publish --provider="Elmarzouguidev\Shoppingcart\ShoppingcartServiceProvider" --tag="migrations"
     
 This will place a `shoppingcart` table's migration file into `database/migrations` directory. Now all you have to do is run `php artisan migrate` to migrate your database.
 
@@ -606,14 +606,14 @@ If you want to erase the cart from the database, all you have to do is call the 
 
 ## Calculators
 
-The calculation logic for the package is implemented and defined in `Calculator` classes. These implement the `Gloudemans\Shoppingcart\Contracts\Calculator` Contract and and determine how the prices are calculated and rounded. The calculators can be configured in the confugration file. This is the default calculator:
+The calculation logic for the package is implemented and defined in `Calculator` classes. These implement the `Elmarzouguidev\Shoppingcart\Contracts\Calculator` Contract and and determine how the prices are calculated and rounded. The calculators can be configured in the confugration file. This is the default calculator:
 ```php
 <?php
 
-namespace Gloudemans\Shoppingcart\Calculation;
+namespace Elmarzouguidev\Shoppingcart\Calculation;
 
-use Gloudemans\Shoppingcart\CartItem;
-use Gloudemans\Shoppingcart\Contracts\Calculator;
+use Elmarzouguidev\Shoppingcart\CartItem;
+use Elmarzouguidev\Shoppingcart\Contracts\Calculator;
 
 class DefaultCalculator implements Calculator
 {
@@ -771,7 +771,7 @@ Cart::add('1239ad0', 'Product 2', 2, 5.95, ['size' => 'large']);
         <a href="https://github.com/Crinsane">
             <img src="https://avatars.githubusercontent.com/u/1297781?v=4" width="100;" alt="Crinsane"/>
             <br />
-            <sub><b>Rob Gloudemans</b></sub>
+            <sub><b>Rob Elmarzouguidev</b></sub>
         </a>
     </td>
     <td align="center">

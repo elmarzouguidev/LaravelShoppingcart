@@ -1,8 +1,8 @@
 <?php
 
-namespace Gloudemans\Shoppingcart\Contracts;
+namespace Elmarzouguidev\Shoppingcart\Contracts;
 
-use Gloudemans\Shoppingcart\CartItem;
+use Elmarzouguidev\Shoppingcart\CartItem;
 
 interface Calculator
 {

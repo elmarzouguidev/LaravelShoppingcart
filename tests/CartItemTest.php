@@ -1,9 +1,9 @@
 <?php
 
-namespace Gloudemans\Tests\Shoppingcart;
+namespace Elmarzouguidev\Tests\Shoppingcart;
 
-use Gloudemans\Shoppingcart\CartItem;
-use Gloudemans\Shoppingcart\ShoppingcartServiceProvider;
+use Elmarzouguidev\Shoppingcart\CartItem;
+use Elmarzouguidev\Shoppingcart\ShoppingcartServiceProvider;
 use Orchestra\Testbench\TestCase;
 
 class CartItemTest extends TestCase

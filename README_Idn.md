@@ -336,11 +336,11 @@ Untuk kenyamanan menambahkan item yang lebih cepat ke troli dan asosiasi otomati
 <?php
 namespace App\Models;
 
-use Gloudemans\Shoppingcart\Contracts\Buyable;
+use Elmarzouguidev\Shoppingcart\Contracts\Buyable;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model implements Buyable {
-    use Gloudemans\Shoppingcart\CanBeBought;
+    use Elmarzouguidev\Shoppingcart\CanBeBought;
 }
 ```
 
@@ -367,7 +367,7 @@ Contoh:
 <?php
 namespace App\Models;
 
-use Gloudemans\Shoppingcart\Contracts\Buyable;
+use Elmarzouguidev\Shoppingcart\Contracts\Buyable;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model implements Buyable {
@@ -433,7 +433,7 @@ Anda juga dapat menggunakan Kontrak `InstanceIdentifier` untuk memperpanjang Mod
 namespace App;
 ...
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Gloudemans\Shoppingcart\Contracts\InstanceIdentifier;
+use Elmarzouguidev\Shoppingcart\Contracts\InstanceIdentifier;
 
 class User extends Authenticatable implements InstanceIdentifier
 {
@@ -514,13 +514,13 @@ Untuk menyimpan keranjang ke dalam basis data sehingga Anda dapat mengambilnya n
 Secara default paket akan menggunakan koneksi database default dan menggunakan tabel bernama `shoppingcart`.
 Jika Anda ingin mengubah opsi ini, Anda harus menerbitkan file `config`.
 
-    php artisan vendor:publish --provider="Gloudemans\Shoppingcart\ShoppingcartServiceProvider" --tag="config"
+    php artisan vendor:publish --provider="Elmarzouguidev\Shoppingcart\ShoppingcartServiceProvider" --tag="config"
 
 Ini akan memberi Anda file konfigurasi `cart.php` di mana Anda dapat melakukan perubahan.
 
 Untuk memudahkan hidup Anda, paket ini juga menyertakan `migration` yang siap digunakan yang dapat Anda terbitkan dengan menjalankan:
 
-    php artisan vendor:publish --provider="Gloudemans\Shoppingcart\ShoppingcartServiceProvider" --tag="migrations"
+    php artisan vendor:publish --provider="Elmarzouguidev\Shoppingcart\ShoppingcartServiceProvider" --tag="migrations"
     
 Ini akan menempatkan file migrasi tabel `shoppingcart` ke direktori` database / migrations`. Sekarang yang harus Anda lakukan adalah menjalankan `php artisan migrate` untuk memigrasi basis data Anda.
 

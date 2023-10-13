@@ -1,9 +1,9 @@
 <?php
 
-namespace Gloudemans\Shoppingcart\Calculation;
+namespace Elmarzouguidev\Shoppingcart\Calculation;
 
-use Gloudemans\Shoppingcart\CartItem;
-use Gloudemans\Shoppingcart\Contracts\Calculator;
+use Elmarzouguidev\Shoppingcart\CartItem;
+use Elmarzouguidev\Shoppingcart\Contracts\Calculator;
 
 class DefaultCalculator implements Calculator
 {

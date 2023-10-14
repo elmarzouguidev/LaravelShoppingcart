@@ -1,5 +1,6 @@
 # Attention by Elmarzouguidev
-The original package :   [LaravelShoppingcart](https://github.com/bumbummen99/LaravelShoppingcart)
+## The original package :   [LaravelShoppingcart](https://github.com/bumbummen99/LaravelShoppingcart)
+## This fork is still in Mode Dev for make it compatible with Laravel 9.* and 10.*
 
 for testing in  php8.1 or 8.2 in( Ubuntu 22.*) you need to install sqlite 3
 

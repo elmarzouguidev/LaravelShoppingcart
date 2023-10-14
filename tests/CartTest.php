@@ -20,7 +20,7 @@ use Orchestra\Testbench\TestCase;
 
 class CartTest extends TestCase
 {
-    use CartAssertions;
+    use CartAssertionsTestTrait;
 
     /**
      * Set the package service provider.

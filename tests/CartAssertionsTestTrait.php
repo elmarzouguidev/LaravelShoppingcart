@@ -5,7 +5,7 @@ namespace Elmarzouguidev\Tests\Shoppingcart;
 use Elmarzouguidev\Shoppingcart\Cart;
 use PHPUnit\Framework\Assert as PHPUnit;
 
-trait CartAssertions
+trait CartAssertionsTestTrait
 {
     /**
      * Assert that the cart contains the given number of items.

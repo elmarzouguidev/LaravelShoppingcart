@@ -14,6 +14,7 @@ use Illuminate\Database\DatabaseManager;
 use Illuminate\Session\SessionManager;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Traits\Macroable;
+use Illuminate\Support\Str;
 
 class Cart
 {
@@ -101,7 +102,7 @@ class Cart
             $instance = $instance->getInstanceIdentifier();
         }
 
-        $this->instance = 'cart.'.$instance;
+        $this->instance = 'cart.' . $instance;
 
         return $this;
     }
@@ -650,6 +651,7 @@ class Cart
         }
 
         $this->getConnection()->table($this->getTableName())->insert([
+            'uuid' => Str::uuid(),
             'identifier' => $identifier,
             'instance'   => $instance,
             'content'    => $serializedContent,
@@ -680,7 +682,7 @@ class Cart
         }
 
         $stored = $this->getConnection()->table($this->getTableName())
-            ->where(['identifier'=> $identifier, 'instance' => $currentInstance])->first();
+            ->where(['identifier' => $identifier, 'instance' => $currentInstance])->first();
 
         if ($this->getConnection()->getDriverName() === 'pgsql') {
             $storedContent = unserialize(base64_decode(data_get($stored, 'content')));
@@ -749,7 +751,7 @@ class Cart
         }
 
         $stored = $this->getConnection()->table($this->getTableName())
-            ->where(['identifier'=> $identifier, 'instance'=> $instance])->first();
+            ->where(['identifier' => $identifier, 'instance' => $instance])->first();
 
         if ($this->getConnection()->getDriverName() === 'pgsql') {
             $storedContent = unserialize(base64_decode($stored->content));
@@ -855,7 +857,7 @@ class Cart
      */
     private function storedCartInstanceWithIdentifierExists($instance, $identifier)
     {
-        return $this->getConnection()->table($this->getTableName())->where(['identifier' => $identifier, 'instance'=> $instance])->exists();
+        return $this->getConnection()->table($this->getTableName())->where(['identifier' => $identifier, 'instance' => $instance])->exists();
     }
 
     /**

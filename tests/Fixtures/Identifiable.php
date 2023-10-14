@@ -19,9 +19,9 @@ class Identifiable implements InstanceIdentifier
     /**
      * BuyableProduct constructor.
      *
-     * @param int|string $id
-     * @param string     $name
-     * @param float      $price
+     * @param  int|string  $id
+     * @param  string  $name
+     * @param  float  $price
      */
     public function __construct($identifier = 'identifier', $discountRate = 0)
     {

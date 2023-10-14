@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateShoppingcartTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -12,6 +12,7 @@ class CreateShoppingcartTable extends Migration
     public function up()
     {
         Schema::create(config('cart.database.table'), function (Blueprint $table) {
+            $table->uuid()->nullable();
             $table->string('identifier');
             $table->string('instance');
             $table->longText('content');
@@ -28,4 +29,4 @@ class CreateShoppingcartTable extends Migration
     {
         Schema::drop(config('cart.database.table'));
     }
-}
+};

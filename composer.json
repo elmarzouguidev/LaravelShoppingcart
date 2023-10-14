@@ -35,7 +35,7 @@
         "Elmarzouguidev/notify": "Simple flash notifications for Laravel"
     },
 
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
 
     "scripts": {
         "test": [

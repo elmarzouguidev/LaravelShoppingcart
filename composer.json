@@ -32,10 +32,6 @@
             "Elmarzouguidev\\Tests\\Shoppingcart\\": "tests/"
         }
     },
-    "suggest": {
-        "Elmarzouguidev/notify": "Simple flash notifications for Laravel"
-    },
-
     "minimum-stability": "dev",
 
     "scripts": {
